@@ -1,0 +1,80 @@
+.AddProvider {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.AddProvider > form {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 95vw;
+    height: 60vh;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-color: rgba(250, 181, 53, 0.438);
+    border-radius: 5px;
+}
+
+.AddProvider .name-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* margin: auto; */
+}
+
+.AddProvider .specialty-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* margin: auto; */
+}
+
+.AddProvider .submit {
+    border-style: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 25%;
+    background-color: rgba(250, 181, 53, 0.87);
+    color: white;
+    font-size: 35px;
+    height: fit-content;
+    transition: .2s ease;
+}
+
+.AddProvider .submit:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+label {
+    color: white;
+    font-size: 45px;
+}
+
+input {
+    font-size: 30px;
+    margin-top: 10px;
+    height: 30px;
+    width: 50%;
+}
+
+.AddProvider .specialty-label {
+    margin-left: 9px;
+}
+
+.AddProvider .cancel-link {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 0 30px;
+    background-color: rgba(250, 181, 53, 0.87);
+    color: white;
+    font-size: 35px;
+    height: fit-content;
+    transition: .2s ease;
+}
+
+.AddProvider .cancel-link:hover {
+    font-size: 2.5rem;
+}

@@ -1,0 +1,47 @@
+.Home .container {
+    margin-top: 50px;
+    min-height: 80vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Home .link-container {
+    display: flex;
+    margin: auto 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Home .title {
+    padding-top: 10px;
+    color: white;
+    font-size: 60px;
+}
+
+.Home .subtitle {
+    margin: auto 0;
+    color: white;
+    font-size: 35px;
+    text-shadow: #1a1b1f 1.5px 1.5px;
+}
+
+.Home .link {
+    text-decoration: none;
+    color: white;
+    text-shadow: black .5px .5px;
+    font-size: 35px;
+    border: 1px solid #1a1b1f;
+    border-radius: 10px;
+    padding: 7px 25px;
+    background-color: rgba(250, 181, 53, 0.87);
+
+}
+
+h1 {
+    margin-top: 50px;
+    color: whitesmoke;
+    text-shadow: rgba(250, 181, 53, 0.459) 1px 1px;
+}
