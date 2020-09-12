@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Link,  Redirect} from 'react-router-dom'
+import {Link,  useHistory} from 'react-router-dom'
 import {useEffect} from 'react'
 import '../css/AddProvider.css'
 import providerApi from '../api/providerApi'
@@ -8,7 +8,7 @@ import providerApi from '../api/providerApi'
 
 export default function AddProvider() {
 
-
+    let history = useHistory();
     const [providerInfo, setProviderInfo] = useState({name: "", specialty: ""})
 
     useEffect(() => {console.log(providerInfo)})
@@ -31,7 +31,7 @@ export default function AddProvider() {
                 .then(response => {console.log(response)})
                 .catch( err => {console.log(err)} )
 
-                return <Redirect from='/addProvider' to="/" />
+                history.push('/')
             }
 
     }
@@ -41,7 +41,7 @@ export default function AddProvider() {
             <Link to='/' className="cancel-link">Cancel</Link>
 
 
-            <form onSubmit={e => handleSubmit(e)}>
+            <form onSubmit={e =>  handleSubmit(e) }>
             <div className="name-container">
             <label className="name-label" htmlFor="name">Full Name:</label>
 
