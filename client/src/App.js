@@ -1,16 +1,47 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Home from './components/Home'
 import AddProvider from './components/AddProvider'
+import PatientHome from './components/PatientHome'
+import ProviderList from './components/ProviderList'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './css/App.css'
 
 function App() {
+
+
+  const [message, setMessage] = useState(undefined) //Message that indicates whether the request was successful or not
+
+
+  useEffect(() => {console.log(message)}, [message])
+
+  function removeMessage() //Function to make sure after message is delivered it will reset to wait for next request response
+  {
+    setMessage(undefined)
+  }
+
+
+  function handlePOST_response(res) { //Change message depending on response. Passed as prop to addProvider component
+
+      if(res.status === 201)
+        {
+          setMessage("Provider added successfully!")
+        }
+
+      else 
+        {
+          setMessage("Some error occurred while adding the provider")
+        }
+
+  }
+
   return (
         <>
         <Router>
         <Switch>
-            <Route path='/' exact component={Home}></Route>
-            <Route path='/addProvider' exact component={AddProvider}></Route>
+            <Route path='/providerList' render={()  => <ProviderList/>}></Route>
+            <Route path='/patientHome' render={()  => <PatientHome/>}></Route>
+            <Route path='/addProvider' render={() => <AddProvider handlePOST_response={handlePOST_response}/> }></Route>
+            <Route path='/' render={() => <Home message={message} removeMessage={removeMessage} /> }></Route>
         </Switch>
         </Router>
         </>

@@ -1,0 +1,36 @@
+.PatientHome .searchbar {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.PatientHome .bar {
+    width: 50%;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    height: 35px;
+    border: none;
+    border-radius: 19px;
+}
+
+.PatientHome .bar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.678);
+}
+
+.PatientHome .search-button {
+        font-size: 1.1em;
+        margin-top: 10px;
+        margin-left: 20px;
+        border: none;
+        height: 31px;
+        width: 80px;
+        border-radius: 7px;
+        background-color: rgba(250, 181, 53, 0.87);
+        color: white;
+
+}

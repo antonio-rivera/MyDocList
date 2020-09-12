@@ -6,10 +6,10 @@ import providerApi from '../api/providerApi'
 
 
 
-export default function AddProvider() {
+export default function AddProvider({handlePOST_response}) {
 
-    let history = useHistory();
-    const [providerInfo, setProviderInfo] = useState({name: "", specialty: ""})
+    let history = useHistory(); //For dynamic redirects
+    const [providerInfo, setProviderInfo] = useState({provider_full_name: "", specialty: ""}) //Data that is sent in POST request
 
     useEffect(() => {console.log(providerInfo)})
 
@@ -28,8 +28,8 @@ export default function AddProvider() {
         else
             {
                 providerApi.insertProvider(providerInfo)
-                .then(response => {console.log(response)})
-                .catch( err => {console.log(err)} )
+                .then(response => handlePOST_response(response) )
+                .catch( err => handlePOST_response(err) )
 
                 history.push('/')
             }
@@ -49,7 +49,7 @@ export default function AddProvider() {
             className="input" 
             type="text" 
             name="name"
-            onChange={e => setProviderInfo({...providerInfo, name: e.target.value})}
+            onChange={e => setProviderInfo({...providerInfo, provider_full_name: e.target.value})}
             />
             </div>
 

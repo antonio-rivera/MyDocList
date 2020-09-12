@@ -45,3 +45,27 @@ h1 {
     color: whitesmoke;
     text-shadow: rgba(250, 181, 53, 0.459) 1px 1px;
 }
+
+.PopUp {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    border: 2px solid black;
+    width: 95vw;
+    height: fit-content;
+    background-color: rgba(250, 181, 53, 0.89);
+    animation: Pop ease-in-out 9s;
+}
+
+@keyframes Pop {
+    50% {
+        transform: translateY(60px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
