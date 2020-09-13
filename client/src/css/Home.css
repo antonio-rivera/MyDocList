@@ -55,7 +55,7 @@ h1 {
     width: 95vw;
     height: fit-content;
     background-color: rgba(250, 181, 53, 0.89);
-    animation: Pop ease-in-out 9s;
+    animation: Pop ease-in-out 7s;
 }
 
 @keyframes Pop {

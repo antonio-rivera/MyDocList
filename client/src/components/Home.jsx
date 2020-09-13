@@ -5,7 +5,7 @@ import '../css/Home.css'
 
 export default function Home({message, removeMessage}) {
 
-    let cname = ""
+    let cname = "" //Classname for our Pop animation indicating if request worked or not
     if (message !== undefined) {cname = "PopUp"}
 
     return (

@@ -3,13 +3,15 @@ import Home from './components/Home'
 import AddProvider from './components/AddProvider'
 import PatientHome from './components/PatientHome'
 import ProviderList from './components/ProviderList'
+import AddAppointment from './components/AddAppointment'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import './css/App.css'
 
 function App() {
 
 
-  const [message, setMessage] = useState(undefined) //Message that indicates whether the request was successful or not
+  const [message, setMessage] = useState(undefined) //Message that indicates whether the POST request on
+                                                    //the AddProvider component was successful or not
 
 
   useEffect(() => {console.log(message)}, [message])
@@ -38,6 +40,7 @@ function App() {
         <>
         <Router>
         <Switch>
+        <Route path='/addAppointment' exact component={AddAppointment}></Route>
             <Route path='/providerList' render={()  => <ProviderList/>}></Route>
             <Route path='/patientHome' render={()  => <PatientHome/>}></Route>
             <Route path='/addProvider' render={() => <AddProvider handlePOST_response={handlePOST_response}/> }></Route>

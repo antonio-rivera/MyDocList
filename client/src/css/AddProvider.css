@@ -48,12 +48,12 @@
 }
 
 
-label {
+.AddProvider > label {
     color: white;
     font-size: 45px;
 }
 
-input {
+.AddProvider > input {
     font-size: 30px;
     margin-top: 10px;
     height: 30px;

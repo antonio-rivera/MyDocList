@@ -7,19 +7,29 @@ export default function ProviderList() {
 
     const [providerData, setProviderData] = useState([])
 
-    useEffect(() => {
-            providerApi.getProviders()
-            .then(res => {console.log(res)})
+    useEffect( () => {
+
+        const getData = async () => {   //Fetch the provider list from our API
+             await providerApi.getProviders()
+            .then(res => {
+                console.log(res)
+                setProviderData(res.data.data)
+            })
             .catch(
                 error => console.log(error)
             )
+        }
+
+        getData();
     }, [])
 
+    //For debugging
+    useEffect(()=>{console.log(providerData)}, [providerData])
 
     return (
-        <div>
+        <div className="ProviderList">
             <NavBar/>
-            <h1>ProviderList</h1>
+            {providerData.map(provider => <Provider key={provider._id} provider={provider}/>)} 
         </div>
     )
 }

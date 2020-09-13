@@ -51,7 +51,7 @@ exports.getProviderbyId = async (req,res) => { //Controller for finding a single
 } //SEARCH function
 
 exports.getProviders = async (req, res) => { //Controller for finding all providers on the list
-    await Providers.find({}, (error, provider) => {
+    await Provider.find({}, (error, provider) => {
         if(error)
         {
             return res.status(400).json({success: false, error: "Query is incorrect"});

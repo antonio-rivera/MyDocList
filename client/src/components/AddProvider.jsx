@@ -10,28 +10,30 @@ export default function AddProvider({handlePOST_response}) {
 
     let history = useHistory(); //For dynamic redirects
     const [providerInfo, setProviderInfo] = useState({provider_full_name: "", specialty: ""}) //Data that is sent in POST request
+    const [waitingMessage, setWaitingMessage] = useState("Thank you for joining our list")
 
     useEffect(() => {console.log(providerInfo)})
 
 
-    //Handle submission of form. If successful POST request
-    function handleSubmit(event)
+    //Handle submission of form. If successful POST request. Asynchronous
+    async function handleSubmit(event)
     {
         
-        event.preventDefault();
+        event.preventDefault(); //Prevent page reloading and data resetting
 
-        if(providerInfo.name === "" || providerInfo.specialty === "")
+        if(  providerInfo.specialty === "" || providerInfo.provider_full_name === "" )
             {
                 alert("Some or all fields are still blank")
             }
 
         else
             {
-                providerApi.insertProvider(providerInfo)
+                setWaitingMessage("Loading...");
+                await providerApi.insertProvider(providerInfo) 
                 .then(response => handlePOST_response(response) )
                 .catch( err => handlePOST_response(err) )
 
-                history.push('/')
+                history.push('/') //Change page to Home.jsx
             }
 
     }
@@ -70,7 +72,7 @@ export default function AddProvider({handlePOST_response}) {
             />
             </form>
 
-            <h1>Thank you for joining our list</h1>
+            <h1>{waitingMessage}</h1>
         </div>
     )
 }

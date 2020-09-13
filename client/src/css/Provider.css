@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+
+.Provider .container {
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 60%;
+    height: 20vh;
+    border: 3px solid white;
+    background-color: rgba(89, 114, 255, 0.767);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Provider .name-container {
+    display: flex;
+}
+
+.Provider .specialty-container {
+    display: flex;
+}
+
+
+.Provider .value {
+    padding: 0 5px;
+    border-radius: 7px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 1.3em;
+    background-color: rgba(0, 0, 0, 0.281);
+    color: rgb(255, 208, 0);
+    
+}
+
+.Provider .label {
+    font-size: 1.5em;
+    text-shadow: black 1.5px 1.5px;
+    margin-right: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.Provider .appointment-btn {
+    line-height: 2.2rem;
+    text-decoration: none;
+    height: 25px;
+    padding: 0 5px;
+    font-size: 20px;
+    text-shadow: black 1px 1px;
+    border-radius: 7px;
+    border: .1px solid black;
+    color: white;
+    background-color: rgba(250, 181, 53, 0.89);
+    font-family: 'Baloo Tammudu 2', cursive;
+}
