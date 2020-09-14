@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Home from './components/Home'
 import AddProvider from './components/AddProvider'
 import PatientHome from './components/PatientHome'
@@ -14,7 +14,6 @@ function App() {
                                                     //the AddProvider component was successful or not
 
 
-  useEffect(() => {console.log(message)}, [message])
 
   function removeMessage() //Function to make sure after message is delivered it will reset to wait for next request response
   {

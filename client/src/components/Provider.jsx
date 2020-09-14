@@ -17,7 +17,7 @@ export default function Provider({provider}) {
                 </div>
                 <Link to={{
                     pathname: "/addAppointment",
-                    providerId: provider.provider_id
+                    providerId: provider._id
                 }}
                 className="appointment-btn">
                 

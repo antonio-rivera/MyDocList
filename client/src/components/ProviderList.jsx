@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import NavBar from './NavBar'
 import Provider from './Provider'
 import providerApi from '../api/providerApi'
+import '../css/ProviderList.css'
 
 export default function ProviderList() {
 
@@ -16,7 +17,8 @@ export default function ProviderList() {
                 setProviderData(res.data.data)
             })
             .catch(
-                error => console.log(error)
+                error => {console.log(error)
+                }
             )
         }
 
@@ -29,7 +31,8 @@ export default function ProviderList() {
     return (
         <div className="ProviderList">
             <NavBar/>
-            {providerData.map(provider => <Provider key={provider._id} provider={provider}/>)} 
+            {providerData.map(provider => <Provider key={provider._id} provider={provider}/>)}
+            <div className="error-message">{providerData.length === 0 ? "Failed to load data" : ""}</div>
         </div>
     )
 }
