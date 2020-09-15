@@ -16,6 +16,7 @@ useEffect(() => {
 
 
     //Function to handle the search functionality
+    //Get data and then filter it based on the user's input string
     async function handleSearch(e)
     {
         e.preventDefault();

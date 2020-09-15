@@ -34,3 +34,8 @@
         color: white;
 
 }
+
+.PatientHome .search-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
