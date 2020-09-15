@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import '../css/Home.css'
 
 
+
 export default function Home({message, removeMessage}) {
+
+    useEffect(() => {
+
+        return () => {
+            removeMessage() //Remove message when leaving component
+        }
+    }, [removeMessage])
+    
+
 
     let cname = "" //Classname for our Pop animation indicating if request worked or not
     if (message !== undefined) {cname = "PopUp"}

@@ -68,7 +68,7 @@ export default function AddAppointment({location}) {
 
     return (
         <div className="AddAppointment">
-            <div className="cancel-container"><Link to='/' className="cancel-link">Cancel</Link></div>
+            <div className="cancel-container"><Link to='/patientHome' className="cancel-link">Cancel</Link></div>
 
             <form onSubmit={e => handleSubmit(e)}>
 

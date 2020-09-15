@@ -25,8 +25,6 @@ export default function ProviderList() {
         getData();
     }, [])
 
-    //For debugging
-    useEffect(()=>{console.log(providerData)}, [providerData])
 
     return (
         <div className="ProviderList">

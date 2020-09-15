@@ -32,3 +32,7 @@
     text-shadow: black .5px .5px;
     font-size: 1.3em;
 }
+
+.NavBar .navlink:hover {
+    text-decoration: underline;
+}
