@@ -51,7 +51,7 @@ exports.createAppointment = (req,res) => { //Function controller to create a new
 // } //SEARCH function
 
 exports.getAppointments = async (req, res) => { //Controller for finding all appointments on the list
-    await Appointments.find({}, (error, appointment) => {
+    await Appointment.find({}, (error, appointment) => {
         if(error)
         {
             return res.status(400).json({success: false, error: "Query is incorrect"});

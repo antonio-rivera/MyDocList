@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import NavBar from './NavBar'
 import '../css/PatientHome.css'
 import providerApi from '../api/providerApi'
@@ -9,11 +9,6 @@ export default function PatientHome() {
     const [searchData, setSearchData] = useState([]) //Data from search
 
     const [searchInput, setSearchInput] = useState("") //What user writes on search bar
-
-useEffect(() => {
-    console.log(searchData)
-}, [searchData])
-
 
     //Function to handle the search functionality
     //Get data and then filter it based on the user's input string

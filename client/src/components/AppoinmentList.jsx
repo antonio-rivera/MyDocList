@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import NavBar from './NavBar'
 import appointmentApi from '../api/appointmentApi'
 import Appointment from './Appointment'
+import '../css/AppointmentList.css'
 
 
 export default function AppointmentList() {
@@ -27,7 +28,7 @@ export default function AppointmentList() {
 
 
     return (
-        <div className="ProviderList">
+        <div className="AppointmentList">
             <NavBar/>
             {appointmentData.map(appointment => <Appointment key={appointment._id} appointment={appointment}/>)}
             <div className="error-message">{appointmentData.length === 0 ? "Failed to load data" : ""}</div>
