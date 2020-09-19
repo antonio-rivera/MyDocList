@@ -62,7 +62,8 @@ export default function AddAppointment({location}) {
             history.push('/patientHome')
 
 
-    }
+    } //Handle submit ends
+    
 
 
 
@@ -77,9 +78,11 @@ export default function AddAppointment({location}) {
                     <div className="dtp-container">
                     <DateTimePicker
                         
+                        format={"y/MMM/dd    h:ma"}
                         className="dtp"
                         value={startTime}
                         onChange={setStartTime}
+                        disableClock={true}
                     />
                     </div>
                     
@@ -89,10 +92,12 @@ export default function AddAppointment({location}) {
                     <label>End time: </label>
                     <div className="dtp-container">
                     <DateTimePicker
-                        
+
+                        format={"y/MMM/dd    h:ma"}
                         className="dtp"
                         value={endTime}
                         onChange={setEndTime}
+                        disableClock={true}
                     />
                     </div>
                 </div>

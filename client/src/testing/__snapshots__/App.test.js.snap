@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main app component that connects all components should render correctly 1`] = `
+<Fragment>
+  <BrowserRouter>
+    <Switch>
+      <Route
+        path="/appointmentList"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/addAppointment"
+      />
+      <Route
+        path="/providerList"
+        render={[Function]}
+      />
+      <Route
+        path="/patientHome"
+        render={[Function]}
+      />
+      <Route
+        path="/addProvider"
+        render={[Function]}
+      />
+      <Route
+        path="/"
+        render={[Function]}
+      />
+    </Switch>
+  </BrowserRouter>
+</Fragment>
+`;

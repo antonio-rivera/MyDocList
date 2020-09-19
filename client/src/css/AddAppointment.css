@@ -30,17 +30,25 @@
     justify-content: space-around;
 }
 
-.AddAppointment .dtp-container  {
+.AddAppointment .dtp-container {
     height: fit-content;
     margin-left: 10px;
     background-color:  rgb(255, 255, 255);
 }
 
-.AddAppointment .dtp {
-    width: fit-content;
-    font-size: 1.5rem;
-    display: flex;
+.AddAppointment .dtp  {
+    font-size: 25px;
 }
+
+.AddAppointment .dtp :nth-child(6) {
+   margin: 0;
+}
+
+.AddAppointment .dtp :nth-child(9) {
+    margin-right: -9px;
+ }
+
+
 
 .AddAppointment label {
     font-size: 1.8em;
