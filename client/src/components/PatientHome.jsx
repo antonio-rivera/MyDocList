@@ -24,7 +24,7 @@ export default function PatientHome() {
 
            const filtered = allData.filter((provider) => {
   
-            return provider.provider_full_name.includes(searchInput) || provider.specialty.includes(searchInput)
+            return provider.provider_full_name.toLowerCase().includes(searchInput.toLowerCase()) || provider.specialty.toLowerCase().includes(searchInput.toLowerCase())
             })
 
             setSearchData(filtered)
@@ -46,7 +46,7 @@ export default function PatientHome() {
             <form className="searchbar">
                 <input 
                 className="bar" 
-                type="text" 
+                type="search" 
                 placeholder="search by provider name or specialty"
                 onChange={e => setSearchInput(e.target.value)}
                 />
